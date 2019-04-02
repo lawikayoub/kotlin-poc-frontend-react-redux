@@ -1,0 +1,11 @@
+package nl.lawik.poc.frontend.reactredux.reducers
+
+import nl.lawik.poc.frontend.reactredux.entities.Todo
+import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
+import redux.RAction
+import redux.combineReducers
+
+data class State(val todos: Array<Todo> = emptyArray(), val visibilityFilter: VisibilityFilter = VisibilityFilter.SHOW_ALL)
+
+fun combinedReducers() =
+    combineReducers<State, RAction>(mapOf("todos" to ::todoReducer, "visibilityFilter" to ::visibilityFilterReducer))
