@@ -16,19 +16,21 @@ import redux.WrapperAction
 
 
 class AddTodo(props: RProps) : RComponent<RProps, RState>(props) {
-    private lateinit var input: HTMLInputElement
+    private val inputRef = createRef<HTMLInputElement>()
     override fun RBuilder.render() {
         div {
             form {
-                attrs.onSubmitFunction = {
-                    it.preventDefault()
-                    if (input.value.trim().isNotEmpty()) {
-                        store.dispatch(AddTodo(input.value))
-                        input.value = ""
+                attrs.onSubmitFunction = { event ->
+                    event.preventDefault()
+                    inputRef.current!!.let {
+                        if (it.value.trim().isNotEmpty()) {
+                            store.dispatch(AddTodo(it.value))
+                            it.value = ""
+                        }
                     }
                 }
                 input(type = InputType.text) {
-                    ref { input = it as HTMLInputElement }
+                    ref = inputRef
                 }
                 button(type = ButtonType.submit) {
                     +"Add Todo"
