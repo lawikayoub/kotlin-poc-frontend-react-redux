@@ -39,7 +39,7 @@ Similarly you can add dev dependencies in the same npm block using a devDependen
 Thankfully there is a [repository](https://github.com/JetBrains/kotlin-wrappers) for kotlin wrappers for popular JavaScript, these are added via gradle in this project.
 
 ### Todo list example project
-NOTE: import statements are left out in the example code below.
+NOTE: import statements are left out in the code examples below.
 
 #### React
 `RBuilder` allows you to create react components using type-safe builders.
@@ -61,7 +61,7 @@ fun RBuilder.helloWorld() =
     }
 ```
 
-This allows you to use the footer component in another component as follows:
+This allows you to use the helloWorld component in another component as follows:
 ```kotlin
 fun RBuilder.app() = {
     helloWorld()
@@ -74,7 +74,7 @@ A more complex example (with props) will be shown in the [react-redux section](#
 ##### Actions
 Actions are defined using classes which implement the `RAction` interface.
 In JavaScript the action which toggles the status of a todo is defined as follows:
-```ecmascript 6
+```javascript
 export const toggleTodo = id => ({
   type: 'TOGGLE_TODO',
   id
@@ -91,7 +91,7 @@ As you can see the Kotlin version doesn't have an action 'type', this is because
 ##### Reducers
 Just like in JavaScript reducers in Kotlin are functions which take two parameters, a state and an action. 
 In JavaScript the todos reducer is defined as follows:
-```ecmascript 6
+```javascript
 const todos = (state = [], action) => {
   switch (action.type) {
     case 'ADD_TODO':
@@ -173,7 +173,7 @@ Connecting Redux state to React components' props is *somewhat* similar as in Ja
 In JavaScript the `FilterLink` container component is connected to the `Link` component in the following manner:
 
 ```jsx harmony
-// Link.js
+// components/Link.js
 
 const Link = ({ active, children, onClick }) => (
     <button
@@ -196,8 +196,8 @@ Link.propTypes = {
 export default Link
 ```
 
-```ecmascript 6
-// FilterLink.js
+```javascript
+// containers/FilterLink.js
 
 const mapStateToProps = (state, ownProps) => ({
   active: ownProps.filter === state.visibilityFilter
@@ -215,7 +215,7 @@ export default connect(
 
 In Kotlin this is done in the following manner:
 ```kotlin
-//Link.kt
+// components/Link.kt
 
 interface LinkProps : RProps {
     var active: Boolean
@@ -236,7 +236,7 @@ class Link(props: LinkProps) : RComponent<LinkProps, RState>(props) {
 }
 ```
 ```kotlin
-// FilterLink.kt
+// containers/FilterLink.kt
 
 interface FilterLinkProps : RProps {
     var filter: VisibilityFilter
