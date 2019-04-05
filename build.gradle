@@ -53,7 +53,7 @@ kotlinFrontend {
     }
 
     webpackBundle {
-        bundleName = "kotlin-poc-frontend-react-redux"
+        bundleName = "this-will-be-overwritten" // NOTE: for example purposes this is overwritten in `webpack.config.d/filename.js`.
         contentPath = file('src/main/resources/web')
         if (project.hasProperty('prod')) {
             mode = "production"

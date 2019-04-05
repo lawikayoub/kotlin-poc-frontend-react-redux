@@ -311,3 +311,29 @@ fun RBuilder.render() = {
     }
 }
 ```
+
+### Using webpack to bundle(and minify)/run the project
+The kotlin-frontend-plugin allows you to make use of Webpack, the configuration for this project looks like this:
+```groovy
+kotlinFrontend {
+    // ...
+    webpackBundle {
+        bundleName = "this-will-be-overwritten" // NOTE: for example purposes this is overwritten in `webpack.config.d/filename.js`.
+        contentPath = file('src/main/resources/web')
+        if(project.hasProperty('prod')){
+            mode = "production"
+        }
+        // ... 
+    }
+}
+```
+It's also possible to customize the Webpack configuration using JavaScript by adding additional scripts in the `webpack.config.d` folder. The scripts will be appended to the end of the generated Webpack config script (you can see the final output by viewing the `webpack.config.js` file in the generated build folder), the scripts are appended alphabetically, use numbers prefix to change the order.
+See the `filename.js` script for an example on how a script is used to set the name of the bundle(this is just a simple example, the use of scripts allow for full customization of Webpack).
+
+Using the `gradlew -t run` command runs the webpack dev server in continuous mode.
+
+Using the `gradlew bundle -Pprod` command will build the project for production, the Kotlin files will be compiled(transpiled) to JavaScript, the required JavaScript files will be bundled into a single JavaScript file, the bundle will be minified, and moved to the web folder in the root directory of the project (along with the HTML files in the `src/resources/web) folder.
+
+### Removing unused code
+The `kotlin-dce-js` Gradle plugin automatically removes unused code from the compiled(transpiled) JavaScript file, this is especially useful due to the fact that the Kotlin standard library is rather big and has to be included with the app in order for it to run.
+Without the plugin, the production bundle (which is minified) is 2085KB, the plugin brings this down to 617KB.

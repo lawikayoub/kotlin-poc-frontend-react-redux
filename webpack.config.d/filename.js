@@ -1,0 +1,1 @@
+config.output.filename = "kotlin-poc-frontend-react-redux.bundle.js"
