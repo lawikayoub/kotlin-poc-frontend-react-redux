@@ -4,7 +4,7 @@ import nl.lawik.poc.frontend.reactredux.actions.SetVisibilityFilter
 import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
 import redux.RAction
 
-fun visibilityFilterReducer(
+fun visibilityFilter(
     state: VisibilityFilter = VisibilityFilter.SHOW_ALL,
     action: RAction
 ): VisibilityFilter = when (action) {

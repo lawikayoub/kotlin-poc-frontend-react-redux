@@ -25,11 +25,10 @@ private interface LinkDispatchProps : RProps {
 
 val filterLink: RClass<FilterLinkProps> =
     rConnect<State, SetVisibilityFilter, WrapperAction, FilterLinkProps, LinkStateProps, LinkDispatchProps, LinkProps>(
-        { state, props ->
-            active = state.visibilityFilter == props.filter
+        { state, ownProps ->
+            active = state.visibilityFilter == ownProps.filter
         },
-        { dispatch, props ->
-            onClick = { dispatch(SetVisibilityFilter(props.filter)) }
+        { dispatch, ownProps ->
+            onClick = { dispatch(SetVisibilityFilter(ownProps.filter)) }
         }
-
     )(Link::class.js.unsafeCast<RClass<LinkProps>>())

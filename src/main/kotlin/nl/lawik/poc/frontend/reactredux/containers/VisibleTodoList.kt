@@ -12,7 +12,7 @@ import react.invoke
 import react.redux.rConnect
 import redux.WrapperAction
 
-fun getVisibleTodos(todos: Array<Todo>, filter: VisibilityFilter): Array<Todo> = when (filter) {
+private fun getVisibleTodos(todos: Array<Todo>, filter: VisibilityFilter): Array<Todo> = when (filter) {
     VisibilityFilter.SHOW_ALL -> todos
     VisibilityFilter.SHOW_ACTIVE -> todos.filter { !it.completed }.toTypedArray()
     VisibilityFilter.SHOW_COMPLETED -> todos.filter { it.completed }.toTypedArray()
@@ -22,13 +22,13 @@ private interface TodoListStateProps : RProps {
     var todos: Array<Todo>
 }
 
-internal interface TodoListDispatchProps : RProps {
+private interface TodoListDispatchProps : RProps {
     var toggleTodo: (Int) -> Unit
 }
 
 val visibleTodoList: RClass<RProps> =
     rConnect<State, ToggleTodo, WrapperAction, RProps, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
-        { state, props ->
+        { state, _ ->
             todos = getVisibleTodos(state.todos, state.visibilityFilter)
         },
         { dispatch, _ ->

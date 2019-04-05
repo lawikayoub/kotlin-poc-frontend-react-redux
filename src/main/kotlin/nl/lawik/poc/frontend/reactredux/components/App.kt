@@ -9,30 +9,35 @@ import react.dom.h1
 import react.router.dom.browserRouter
 import react.router.dom.navLink
 import react.router.dom.route
+import react.router.dom.switch
 
 private const val TODO_LIST_PATH = "/todolist"
 
 fun RBuilder.app() =
     browserRouter {
-        route("/", exact = true) {
-            div {
-                h1 {
-                    +"Kotlin React + Redux + React-Redux + React-Router Example"
-                }
-                navLink(TODO_LIST_PATH) {
-                    +"Go to todo list"
+        switch {
+            route("/", exact = true) {
+                div {
+                    h1 {
+                        +"Kotlin React + React-Dom + Redux + React-Redux + React-Router Example"
+                    }
+                    navLink(TODO_LIST_PATH) {
+                        +"Go to todo list"
+                    }
                 }
             }
-        }
-        route(TODO_LIST_PATH) {
-            div {
-                addTodo {}
-                visibleTodoList {}
-                footer()
-                br {}
-                navLink("/") {
-                    +"Go back"
+            route(TODO_LIST_PATH) {
+                div {
+                    addTodo {}
+                    visibleTodoList {}
+                    footer()
+                    br {}
+                    navLink("/") {
+                        +"Go back"
+                    }
                 }
             }
         }
     }
+
+

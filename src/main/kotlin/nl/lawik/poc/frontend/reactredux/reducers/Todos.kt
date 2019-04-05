@@ -5,7 +5,7 @@ import nl.lawik.poc.frontend.reactredux.actions.ToggleTodo
 import nl.lawik.poc.frontend.reactredux.entities.Todo
 import redux.RAction
 
-fun todoReducer(state: Array<Todo> = emptyArray(), action: RAction): Array<Todo> = when (action) {
+fun todos(state: Array<Todo> = emptyArray(), action: RAction): Array<Todo> = when (action) {
     is AddTodo -> state + Todo(action.id, action.text, false)
     is ToggleTodo -> state.map {
         if (it.id == action.id) {
