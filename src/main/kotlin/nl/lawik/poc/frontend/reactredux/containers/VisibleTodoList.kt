@@ -18,11 +18,11 @@ private fun getVisibleTodos(todos: Array<Todo>, filter: VisibilityFilter): Array
     VisibilityFilter.SHOW_COMPLETED -> todos.filter { it.completed }.toTypedArray()
 }
 
-private interface TodoListStateProps : RProps {
+private external interface TodoListStateProps : RProps {
     var todos: Array<Todo>
 }
 
-private interface TodoListDispatchProps : RProps {
+private external interface TodoListDispatchProps : RProps {
     var toggleTodo: (Int) -> Unit
 }
 

@@ -3,6 +3,7 @@ package nl.lawik.poc.frontend.reactredux.components
 import nl.lawik.poc.frontend.reactredux.containers.addTodo
 import nl.lawik.poc.frontend.reactredux.containers.visibleTodoList
 import react.RBuilder
+import react.RProps
 import react.dom.br
 import react.dom.div
 import react.dom.h1
@@ -21,7 +22,7 @@ fun RBuilder.app() =
                     h1 {
                         +"Kotlin React + React-Dom + Redux + React-Redux + React-Router Example"
                     }
-                    navLink(TODO_LIST_PATH) {
+                    navLink<RProps>(TODO_LIST_PATH) {
                         +"Go to todo list"
                     }
                 }
@@ -32,7 +33,7 @@ fun RBuilder.app() =
                     visibleTodoList {}
                     footer()
                     br {}
-                    navLink("/") {
+                    navLink<RProps>("/") {
                         +"Go back"
                     }
                 }

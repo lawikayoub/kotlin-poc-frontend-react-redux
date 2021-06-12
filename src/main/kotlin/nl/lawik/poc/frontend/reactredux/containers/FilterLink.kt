@@ -11,15 +11,15 @@ import react.invoke
 import react.redux.rConnect
 import redux.WrapperAction
 
-interface FilterLinkProps : RProps {
+external interface FilterLinkProps : RProps {
     var filter: VisibilityFilter
 }
 
-private interface LinkStateProps : RProps {
+private external interface LinkStateProps : RProps {
     var active: Boolean
 }
 
-private interface LinkDispatchProps : RProps {
+private external interface LinkDispatchProps : RProps {
     var onClick: () -> Unit
 }
 

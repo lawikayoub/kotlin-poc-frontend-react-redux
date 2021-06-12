@@ -14,7 +14,7 @@ import react.dom.input
 import react.redux.rConnect
 import redux.WrapperAction
 
-
+@JsExport
 class AddTodo(props: RProps) : RComponent<RProps, RState>(props) {
     private val inputRef = createRef<HTMLInputElement>()
     override fun RBuilder.render() {
