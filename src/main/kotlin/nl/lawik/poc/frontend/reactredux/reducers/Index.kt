@@ -12,12 +12,12 @@ data class State(
     val visibilityFilter: VisibilityFilter = VisibilityFilter.SHOW_ALL
 )
 
-//fun combinedReducers() = combineReducers(
-//    mapOf(
-//        State::todos to ::todos,
-//        State::visibilityFilter to ::visibilityFilter
-//    )
-//)
+fun combinedReducers() = combineReducers(
+    mapOf(
+        State::todos to ::todos,
+        State::visibilityFilter to ::visibilityFilter
+    )
+)
 
 fun rootReducer(
     state: State,
