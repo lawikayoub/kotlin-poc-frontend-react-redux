@@ -1,10 +1,9 @@
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig.*
 
 plugins {
-    kotlin("js") version "1.4.32"
+    kotlin("js") version "1.5.10"
 }
 
-val web_dir = "web"
 group = "kotlin-poc-frontend-react-redux"
 version = "1.0-SNAPSHOT"
 
@@ -15,12 +14,12 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains:kotlin-react:17.0.1-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-react-dom:17.0.1-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-redux:4.0.5-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-react-redux:7.2.2-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-styled:5.2.1-pre.148-kotlin-1.4.30")
-    implementation("org.jetbrains:kotlin-react-router-dom:5.2.0-pre.148-kotlin-1.4.30")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.209-kotlin-1.5.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.209-kotlin-1.5.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.0.5-pre.209-kotlin-1.5.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.3-pre.209-kotlin-1.5.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.209-kotlin-1.5.10")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.209-kotlin-1.5.10")
 }
 
 kotlin {
