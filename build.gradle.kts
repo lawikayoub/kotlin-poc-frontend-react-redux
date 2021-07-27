@@ -14,12 +14,12 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.218-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.218-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.0-pre.218-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.218-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.218-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.218-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.222-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.222-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.0-pre.222-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.222-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.222-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.222-kotlin-1.5.21")
 }
 
 kotlin {
