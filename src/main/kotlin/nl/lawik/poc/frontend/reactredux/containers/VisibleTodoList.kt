@@ -6,7 +6,7 @@ import nl.lawik.poc.frontend.reactredux.components.TodoListProps
 import nl.lawik.poc.frontend.reactredux.entities.Todo
 import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
 import nl.lawik.poc.frontend.reactredux.reducers.State
-import react.RClass
+import react.ComponentClass
 import react.RProps
 import react.invoke
 import react.redux.rConnect
@@ -26,7 +26,7 @@ private external interface TodoListDispatchProps : RProps {
     var toggleTodo: (Int) -> Unit
 }
 
-val visibleTodoList: RClass<RProps> =
+val visibleTodoList: ComponentClass<RProps> =
     rConnect<State, ToggleTodo, WrapperAction, RProps, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
         { state, _ ->
             todos = getVisibleTodos(state.todos, state.visibilityFilter)
@@ -34,4 +34,4 @@ val visibleTodoList: RClass<RProps> =
         { dispatch, _ ->
             toggleTodo = { dispatch(ToggleTodo(it)) }
         }
-    )(TodoList::class.js.unsafeCast<RClass<TodoListProps>>())
+    )(TodoList::class.js.unsafeCast<ComponentClass<TodoListProps>>())

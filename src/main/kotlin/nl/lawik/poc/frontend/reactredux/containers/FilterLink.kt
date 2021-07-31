@@ -5,7 +5,7 @@ import nl.lawik.poc.frontend.reactredux.components.Link
 import nl.lawik.poc.frontend.reactredux.components.LinkProps
 import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
 import nl.lawik.poc.frontend.reactredux.reducers.State
-import react.RClass
+import react.ComponentClass
 import react.RProps
 import react.invoke
 import react.redux.rConnect
@@ -23,7 +23,7 @@ private external interface LinkDispatchProps : RProps {
     var onClick: () -> Unit
 }
 
-val filterLink: RClass<FilterLinkProps> =
+val filterLink: ComponentClass<FilterLinkProps> =
     rConnect<State, SetVisibilityFilter, WrapperAction, FilterLinkProps, LinkStateProps, LinkDispatchProps, LinkProps>(
         { state, ownProps ->
             active = state.visibilityFilter == ownProps.filter
@@ -31,4 +31,4 @@ val filterLink: RClass<FilterLinkProps> =
         { dispatch, ownProps ->
             onClick = { dispatch(SetVisibilityFilter(ownProps.filter)) }
         }
-    )(Link::class.js.unsafeCast<RClass<LinkProps>>())
+    )(Link::class.js.unsafeCast<ComponentClass<LinkProps>>())

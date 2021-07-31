@@ -15,7 +15,7 @@ import react.redux.rConnect
 import redux.WrapperAction
 
 @JsExport
-class AddTodo(props: RProps) : RComponent<RProps, RState>(props) {
+class AddTodo(props: RProps) : RComponent<RProps, State>(props) {
     private val inputRef = createRef<HTMLInputElement>()
     override fun RBuilder.render() {
         div {
@@ -41,5 +41,5 @@ class AddTodo(props: RProps) : RComponent<RProps, RState>(props) {
 }
 
 
-val addTodo: RClass<RProps> =
-    rConnect<AddTodo, WrapperAction>()(nl.lawik.poc.frontend.reactredux.containers.AddTodo::class.js.unsafeCast<RClass<RProps>>())
+val addTodo: ComponentClass<RProps> =
+    rConnect<AddTodo, WrapperAction>()(nl.lawik.poc.frontend.reactredux.containers.AddTodo::class.js.unsafeCast<ComponentClass<RProps>>())

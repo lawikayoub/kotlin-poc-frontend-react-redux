@@ -3,10 +3,7 @@ package nl.lawik.poc.frontend.reactredux.components
 import kotlinx.css.marginLeft
 import kotlinx.css.px
 import kotlinx.html.js.onClickFunction
-import react.RBuilder
-import react.RComponent
-import react.RProps
-import react.RState
+import react.*
 import styled.css
 import styled.styledButton
 
@@ -16,7 +13,7 @@ external interface LinkProps : RProps {
 }
 
 @JsExport
-class Link(props: LinkProps) : RComponent<LinkProps, RState>(props) {
+class Link(props: LinkProps) : RComponent<LinkProps, State>(props) {
     override fun RBuilder.render() {
         styledButton {
             attrs.onClickFunction = { props.onClick() }
