@@ -20,6 +20,10 @@ dependencies {
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.223-kotlin-1.5.21")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.223-kotlin-1.5.21")
     implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.223-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-ring-ui:4.0.21-pre.223-kotlin-1.5.21")
+
+    // for kotlin-ring-ui
+    implementation(npm("core-js", "^3.16.0"))
 }
 
 kotlin {
@@ -27,7 +31,6 @@ kotlin {
         binaries.executable()
         browser {
             commonWebpackConfig {
-                cssSupport.enabled = true
                 mode = if(project.hasProperty("prod")) Mode.PRODUCTION else Mode.DEVELOPMENT
             }
         }
