@@ -2,13 +2,11 @@ package nl.lawik.poc.frontend.reactredux.components
 
 import nl.lawik.poc.frontend.reactredux.containers.filterLink
 import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
+import nl.lawik.poc.frontend.reactredux.ringui.ButtonGroup
 import react.RBuilder
-import react.dom.div
-import react.dom.span
 
-fun RBuilder.footer() =
-    div {
-        span { +"Show: " }
+fun RBuilder.filters() =
+    ButtonGroup {
         filterLink {
             attrs.filter = VisibilityFilter.SHOW_ALL
             +"All"

@@ -1,10 +1,8 @@
 package nl.lawik.poc.frontend.reactredux.components
 
-import nl.lawik.poc.frontend.reactredux.containers.addTodo
-import nl.lawik.poc.frontend.reactredux.containers.visibleTodoList
+import nl.lawik.poc.frontend.reactredux.pages.toDoListPage
 import react.RBuilder
 import react.RProps
-import react.dom.br
 import react.dom.div
 import react.dom.h1
 import react.router.dom.browserRouter
@@ -28,15 +26,7 @@ fun RBuilder.app() =
                 }
             }
             route(TODO_LIST_PATH) {
-                div {
-                    addTodo {}
-                    visibleTodoList {}
-                    footer()
-                    br {}
-                    navLink<RProps>("/") {
-                        +"Go back"
-                    }
-                }
+                toDoListPage()
             }
         }
     }

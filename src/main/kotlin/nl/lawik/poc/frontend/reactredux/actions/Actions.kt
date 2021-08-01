@@ -13,4 +13,5 @@ class AddTodo(val text: String): RAction {
 }
 
 class ToggleTodo(val id: Int): RAction
-
+class DeleteTodo(val id: Int): RAction
+class EditTodo(val id: Int, val newText: String): RAction

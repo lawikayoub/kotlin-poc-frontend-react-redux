@@ -1,5 +1,7 @@
 package nl.lawik.poc.frontend.reactredux.containers
 
+import nl.lawik.poc.frontend.reactredux.actions.DeleteTodo
+import nl.lawik.poc.frontend.reactredux.actions.EditTodo
 import nl.lawik.poc.frontend.reactredux.actions.ToggleTodo
 import nl.lawik.poc.frontend.reactredux.components.TodoList
 import nl.lawik.poc.frontend.reactredux.components.TodoListProps
@@ -10,6 +12,7 @@ import react.ComponentClass
 import react.RProps
 import react.invoke
 import react.redux.rConnect
+import redux.RAction
 import redux.WrapperAction
 
 private fun getVisibleTodos(todos: Array<Todo>, filter: VisibilityFilter): Array<Todo> = when (filter) {
@@ -24,14 +27,18 @@ private external interface TodoListStateProps : RProps {
 
 private external interface TodoListDispatchProps : RProps {
     var toggleTodo: (Int) -> Unit
+    var deleteTodo: (Int) -> Unit
+    var updateTodo: (Int, String) -> Unit
 }
 
 val visibleTodoList: ComponentClass<RProps> =
-    rConnect<State, ToggleTodo, WrapperAction, RProps, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
+    rConnect<State, RAction, WrapperAction, RProps, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
         { state, _ ->
             todos = getVisibleTodos(state.todos, state.visibilityFilter)
         },
         { dispatch, _ ->
             toggleTodo = { dispatch(ToggleTodo(it)) }
+            deleteTodo = { dispatch(DeleteTodo(it)) }
+            updateTodo = { id, newText -> dispatch(EditTodo(id, newText)) }
         }
     )(TodoList::class.js.unsafeCast<ComponentClass<TodoListProps>>())
