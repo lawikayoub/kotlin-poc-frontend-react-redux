@@ -4,8 +4,6 @@ import kotlinx.css.properties.TextDecorationLine
 import kotlinx.css.properties.textDecoration
 import kotlinx.html.js.onClickFunction
 import nl.lawik.poc.frontend.reactredux.entities.Todo
-import nl.lawik.poc.frontend.reactredux.ringui.ButtonGroup
-import nl.lawik.poc.frontend.reactredux.ringui.Input
 import org.w3c.dom.HTMLInputElement
 import react.RBuilder
 import react.RProps
@@ -66,8 +64,7 @@ private val TodoItem = functionComponent<TodoProps> { props ->
                                 props.onUpdate(editableValue)
                                 setEdit(false)
                             }
-                            this.asDynamic().disabled =
-                                editableValue.isBlank() // todo: add property to ring-ui wrappers
+                            disabled = editableValue.isBlank()
                         }
                         +"Save"
                     }

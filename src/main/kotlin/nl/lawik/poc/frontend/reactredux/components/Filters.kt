@@ -2,8 +2,8 @@ package nl.lawik.poc.frontend.reactredux.components
 
 import nl.lawik.poc.frontend.reactredux.containers.filterLink
 import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
-import nl.lawik.poc.frontend.reactredux.ringui.ButtonGroup
 import react.RBuilder
+import ringui.ButtonGroup
 
 fun RBuilder.filters() =
     ButtonGroup {

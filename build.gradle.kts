@@ -14,13 +14,13 @@ repositories {
 }
 
 dependencies {
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.0-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.223-kotlin-1.5.21")
-    implementation("org.jetbrains.kotlin-wrappers:kotlin-ring-ui:4.0.21-pre.223-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react:17.0.2-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-dom:17.0.2-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-redux:4.1.0-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-redux:7.2.4-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-styled:5.3.0-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-react-router-dom:5.2.0-pre.224-kotlin-1.5.21")
+    implementation("org.jetbrains.kotlin-wrappers:kotlin-ring-ui:4.0.26-pre.224-kotlin-1.5.21")
 
     // for kotlin-ring-ui
     implementation(npm("core-js", "^3.16.0"))

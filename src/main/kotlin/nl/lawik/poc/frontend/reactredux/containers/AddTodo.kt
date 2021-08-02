@@ -3,7 +3,6 @@ package nl.lawik.poc.frontend.reactredux.containers
 import kotlinx.html.ButtonType
 import kotlinx.html.js.onSubmitFunction
 import nl.lawik.poc.frontend.reactredux.actions.AddTodo
-import nl.lawik.poc.frontend.reactredux.ringui.Input
 import nl.lawik.poc.frontend.reactredux.store
 import org.w3c.dom.HTMLInputElement
 import react.*
