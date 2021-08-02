@@ -1,9 +1,9 @@
-package nl.lawik.poc.frontend.reactredux.components
+package reactredux.components
 
 import kotlinx.css.properties.TextDecorationLine
 import kotlinx.css.properties.textDecoration
 import kotlinx.html.js.onClickFunction
-import nl.lawik.poc.frontend.reactredux.entities.Todo
+import reactredux.entities.Todo
 import org.w3c.dom.HTMLInputElement
 import react.RBuilder
 import react.RProps

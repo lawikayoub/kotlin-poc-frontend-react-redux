@@ -1,6 +1,6 @@
-package nl.lawik.poc.frontend.reactredux.components
+package reactredux.components
 
-import nl.lawik.poc.frontend.reactredux.pages.toDoListPage
+import reactredux.pages.toDoListPage
 import react.RBuilder
 import react.RProps
 import react.dom.div

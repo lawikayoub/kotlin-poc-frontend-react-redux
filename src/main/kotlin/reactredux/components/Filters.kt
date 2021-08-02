@@ -1,7 +1,7 @@
-package nl.lawik.poc.frontend.reactredux.components
+package reactredux.components
 
-import nl.lawik.poc.frontend.reactredux.containers.filterLink
-import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
+import reactredux.containers.filterLink
+import reactredux.enums.VisibilityFilter
 import react.RBuilder
 import ringui.ButtonGroup
 

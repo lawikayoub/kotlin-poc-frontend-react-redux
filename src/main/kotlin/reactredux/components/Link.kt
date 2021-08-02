@@ -1,4 +1,4 @@
-package nl.lawik.poc.frontend.reactredux.components
+package reactredux.components
 
 import react.*
 import ringui.Button

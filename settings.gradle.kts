@@ -1,2 +1,2 @@
-rootProject.name = "kotlin-poc-frontend-react-redux"
+rootProject.name = "react-redux-todo-list-sample"
 

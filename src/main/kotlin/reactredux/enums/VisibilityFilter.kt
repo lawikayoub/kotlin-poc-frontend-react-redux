@@ -1,4 +1,4 @@
-package nl.lawik.poc.frontend.reactredux.enums
+package reactredux.enums
 
 enum class VisibilityFilter {
     SHOW_ALL,

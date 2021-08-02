@@ -1,13 +1,13 @@
-package nl.lawik.poc.frontend.reactredux
+package reactredux
 
-import nl.lawik.poc.frontend.reactredux.components.app
-import nl.lawik.poc.frontend.reactredux.reducers.State
+import reactredux.components.app
+import reactredux.reducers.State
 import react.dom.render
 import react.redux.provider
 import redux.createStore
 import redux.rEnhancer
 import kotlinx.browser.document
-import nl.lawik.poc.frontend.reactredux.reducers.rootReducer
+import reactredux.reducers.rootReducer
 
 val store = createStore(::rootReducer, State(), rEnhancer())
 

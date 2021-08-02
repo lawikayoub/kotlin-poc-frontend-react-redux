@@ -1,10 +1,10 @@
-package nl.lawik.poc.frontend.reactredux.containers
+package reactredux.containers
 
-import nl.lawik.poc.frontend.reactredux.actions.SetVisibilityFilter
-import nl.lawik.poc.frontend.reactredux.components.Link
-import nl.lawik.poc.frontend.reactredux.components.LinkProps
-import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
-import nl.lawik.poc.frontend.reactredux.reducers.State
+import reactredux.actions.SetVisibilityFilter
+import reactredux.components.Link
+import reactredux.components.LinkProps
+import reactredux.enums.VisibilityFilter
+import reactredux.reducers.State
 import react.ComponentClass
 import react.RProps
 import react.invoke

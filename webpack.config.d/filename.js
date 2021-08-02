@@ -1,1 +1,1 @@
-config.output.filename = "kotlin-poc-frontend-react-redux.bundle.js"
+config.output.filename = "react-redux-todo-list-sample.bundle.js"

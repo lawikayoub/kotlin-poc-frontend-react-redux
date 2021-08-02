@@ -1,6 +1,6 @@
-package nl.lawik.poc.frontend.reactredux.actions
+package reactredux.actions
 
-import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
+import reactredux.enums.VisibilityFilter
 import redux.RAction
 
 class SetVisibilityFilter(val filter: VisibilityFilter) : RAction

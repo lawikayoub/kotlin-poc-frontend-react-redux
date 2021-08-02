@@ -1,6 +1,6 @@
-package nl.lawik.poc.frontend.reactredux.components
+package reactredux.components
 
-import nl.lawik.poc.frontend.reactredux.entities.Todo
+import reactredux.entities.Todo
 import react.RBuilder
 import react.RComponent
 import react.RProps

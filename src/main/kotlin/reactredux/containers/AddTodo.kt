@@ -1,9 +1,9 @@
-package nl.lawik.poc.frontend.reactredux.containers
+package reactredux.containers
 
 import kotlinx.html.ButtonType
 import kotlinx.html.js.onSubmitFunction
-import nl.lawik.poc.frontend.reactredux.actions.AddTodo
-import nl.lawik.poc.frontend.reactredux.store
+import reactredux.actions.AddTodo
+import reactredux.store
 import org.w3c.dom.HTMLInputElement
 import react.*
 import react.dom.div
@@ -51,4 +51,4 @@ class AddTodo(props: RProps) : RComponent<RProps, State>(props) {
 
 
 val addTodo: ComponentClass<RProps> =
-    rConnect<AddTodo, WrapperAction>()(nl.lawik.poc.frontend.reactredux.containers.AddTodo::class.js.unsafeCast<ComponentClass<RProps>>())
+    rConnect<AddTodo, WrapperAction>()(reactredux.containers.AddTodo::class.js.unsafeCast<ComponentClass<RProps>>())

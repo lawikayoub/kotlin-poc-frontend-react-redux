@@ -1,13 +1,13 @@
-package nl.lawik.poc.frontend.reactredux.containers
+package reactredux.containers
 
-import nl.lawik.poc.frontend.reactredux.actions.DeleteTodo
-import nl.lawik.poc.frontend.reactredux.actions.EditTodo
-import nl.lawik.poc.frontend.reactredux.actions.ToggleTodo
-import nl.lawik.poc.frontend.reactredux.components.TodoList
-import nl.lawik.poc.frontend.reactredux.components.TodoListProps
-import nl.lawik.poc.frontend.reactredux.entities.Todo
-import nl.lawik.poc.frontend.reactredux.enums.VisibilityFilter
-import nl.lawik.poc.frontend.reactredux.reducers.State
+import reactredux.actions.DeleteTodo
+import reactredux.actions.EditTodo
+import reactredux.actions.ToggleTodo
+import reactredux.components.TodoList
+import reactredux.components.TodoListProps
+import reactredux.entities.Todo
+import reactredux.enums.VisibilityFilter
+import reactredux.reducers.State
 import react.ComponentClass
 import react.RProps
 import react.invoke

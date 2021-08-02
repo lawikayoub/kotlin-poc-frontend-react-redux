@@ -4,7 +4,7 @@ plugins {
     kotlin("js") version "1.5.21"
 }
 
-group = "kotlin-poc-frontend-react-redux"
+group = "react-redux-todo-list-sample"
 version = "1.0-SNAPSHOT"
 
 repositories {

@@ -1,8 +1,8 @@
-package nl.lawik.poc.frontend.reactredux.pages
+package reactredux.pages
 
-import nl.lawik.poc.frontend.reactredux.components.filters
-import nl.lawik.poc.frontend.reactredux.containers.addTodo
-import nl.lawik.poc.frontend.reactredux.containers.visibleTodoList
+import reactredux.components.filters
+import reactredux.containers.addTodo
+import reactredux.containers.visibleTodoList
 import react.RBuilder
 import react.RProps
 import react.dom.br
