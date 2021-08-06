@@ -1,4 +1,4 @@
-# Kotlin React Redux PoC
+# Kotlin/JS IR BE and React + Redux ToDo List Sample
 This project is a PoC of using Kotlin (JS) and React, React-Dom, React-Router, Redux and React-Redux. 
 This project is an implementation/translation of the react-redux [Todo List example project](https://redux.js.org/basics/example) in Kotlin (with the addition of react-router).
 The project showcases the following features:
