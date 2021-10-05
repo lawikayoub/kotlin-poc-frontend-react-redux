@@ -9,7 +9,7 @@ import reactredux.entities.Todo
 import reactredux.enums.VisibilityFilter
 import reactredux.reducers.State
 import react.ComponentClass
-import react.RProps
+import react.Props
 import react.invoke
 import react.redux.rConnect
 import redux.RAction
@@ -21,18 +21,18 @@ private fun getVisibleTodos(todos: Array<Todo>, filter: VisibilityFilter): Array
     VisibilityFilter.SHOW_COMPLETED -> todos.filter { it.completed }.toTypedArray()
 }
 
-private external interface TodoListStateProps : RProps {
+private external interface TodoListStateProps : Props {
     var todos: Array<Todo>
 }
 
-private external interface TodoListDispatchProps : RProps {
+private external interface TodoListDispatchProps : Props {
     var toggleTodo: (Int) -> Unit
     var deleteTodo: (Int) -> Unit
     var updateTodo: (Int, String) -> Unit
 }
 
-val visibleTodoList: ComponentClass<RProps> =
-    rConnect<State, RAction, WrapperAction, RProps, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
+val visibleTodoList: ComponentClass<Props> =
+    rConnect<State, RAction, WrapperAction, Props, TodoListStateProps, TodoListDispatchProps, TodoListProps>(
         { state, _ ->
             todos = getVisibleTodos(state.todos, state.visibilityFilter)
         },

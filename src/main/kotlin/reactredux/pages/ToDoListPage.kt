@@ -4,9 +4,8 @@ import reactredux.components.filters
 import reactredux.containers.addTodo
 import reactredux.containers.visibleTodoList
 import react.RBuilder
-import react.RProps
 import react.dom.br
-import react.router.dom.navLink
+import react.router.dom.NavLink
 import ringui.*
 
 fun RBuilder.toDoListPage() {
@@ -34,7 +33,8 @@ fun RBuilder.toDoListPage() {
                         filters()
                         visibleTodoList {}
                         br {}
-                        navLink<RProps>("/") {
+                        NavLink {
+                            attrs.to = "/"
                             +"Go back"
                         }
                     }

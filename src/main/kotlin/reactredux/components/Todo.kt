@@ -5,15 +5,12 @@ import kotlinx.css.properties.textDecoration
 import kotlinx.html.js.onClickFunction
 import reactredux.entities.Todo
 import org.w3c.dom.HTMLInputElement
-import react.RBuilder
-import react.RProps
-import react.functionComponent
-import react.useState
+import react.*
 import ringui.*
 import styled.css
 import styled.styledP
 
-external interface TodoProps : RProps {
+external interface TodoProps : Props {
     var todo: Todo
     var onClick: () -> Unit
     var onDelete: () -> Unit

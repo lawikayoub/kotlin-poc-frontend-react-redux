@@ -3,7 +3,7 @@ package reactredux.components
 import react.*
 import ringui.Button
 
-external interface LinkProps : RProps {
+external interface LinkProps : PropsWithChildren {
     var active: Boolean
     var onClick: () -> Unit
 }
@@ -14,7 +14,7 @@ class Link(props: LinkProps) : RComponent<LinkProps, State>(props) {
         Button {
             attrs.onMouseDown = { props.onClick() }
             attrs.active = props.active
-            children()
+            props.children()
         }
     }
 }

@@ -13,7 +13,7 @@ import redux.WrapperAction
 import ringui.*
 
 @JsExport
-class AddTodo(props: RProps) : RComponent<RProps, State>(props) {
+class AddTodo(props: Props) : RComponent<Props, State>(props) {
     private val inputRef = createRef<HTMLInputElement>()
     override fun RBuilder.render() {
         div {
@@ -50,5 +50,5 @@ class AddTodo(props: RProps) : RComponent<RProps, State>(props) {
 }
 
 
-val addTodo: ComponentClass<RProps> =
-    rConnect<AddTodo, WrapperAction>()(reactredux.containers.AddTodo::class.js.unsafeCast<ComponentClass<RProps>>())
+val addTodo: ComponentClass<Props> =
+    rConnect<AddTodo, WrapperAction>()(reactredux.containers.AddTodo::class.js.unsafeCast<ComponentClass<Props>>())

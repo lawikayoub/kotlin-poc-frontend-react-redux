@@ -6,20 +6,20 @@ import reactredux.components.LinkProps
 import reactredux.enums.VisibilityFilter
 import reactredux.reducers.State
 import react.ComponentClass
-import react.RProps
+import react.Props
 import react.invoke
 import react.redux.rConnect
 import redux.WrapperAction
 
-external interface FilterLinkProps : RProps {
+external interface FilterLinkProps : Props {
     var filter: VisibilityFilter
 }
 
-private external interface LinkStateProps : RProps {
+private external interface LinkStateProps : Props {
     var active: Boolean
 }
 
-private external interface LinkDispatchProps : RProps {
+private external interface LinkDispatchProps : Props {
     var onClick: () -> Unit
 }
 
