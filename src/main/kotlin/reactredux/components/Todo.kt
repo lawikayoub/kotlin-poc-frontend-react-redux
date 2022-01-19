@@ -17,7 +17,7 @@ external interface TodoProps : Props {
     var onUpdate: (String) -> Unit
 }
 
-private val TodoItem = functionComponent<TodoProps> { props ->
+private val TodoItem = fc<TodoProps> { props ->
     val (isEdit, setEdit) = useState(false)
     val (editableValue, setEditableValue) = useState(props.todo.text)
 

@@ -12,7 +12,7 @@ import reactredux.reducers.rootReducer
 val store = createStore(::rootReducer, State(), rEnhancer())
 
 fun main() {
-    val rootDiv = document.getElementById("root")
+    val rootDiv = document.getElementById("root")!!
     render(rootDiv) {
         provider(store) {
             app()
